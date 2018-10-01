@@ -8,6 +8,7 @@ library(dplyr)
 library(ggplot2)
 library(lubridate)
 library(zoo)
+library(xts)
 require(zoo)
 
 
@@ -33,17 +34,22 @@ YorkshireandTheHumberData = filter(Data, Region_Name == "Yorkshire and The Humbe
 EnglandandWalesData = filter(Data, Region_Name == "England and Wales")
 WalesData = filter(Data, Region_Name == "Wales")
 
-#Create DF
+#Create dataframe of regions
 LocationTable = cbind.data.frame(EnglandData[,c(1,3)],WalesData[3], LondonData[3], NorthEastData[3], WestMidlandsRegionData[3], EastMidlandsData[3], SouthEastData[3], SouthWestData[3], EastofEnglandData[3], NorthWest[3], YorkshireandTheHumberData[3], EnglandandWalesData[3], WalesData[3])
+regions <- c("England", "Wales", "London", "North East", "West Midlands Region", "East Midlands", "South East", "South West", "East of England", "North West", "Yorkshire and the Humber", "England and Wales", "Wales" )
+colnames(LocationTable) = c("Date", regions)
 
-colnames(LocationTable) = c("Data", "England", "Wales", "London", "North East", "West Midlands Region", "East Midlands", "South East", "South West", "East of England", "North West", "Yorkshire and the Humber", "England and Wales", "Wales" )
 
-LocationTable
+
 #Create time series data
-LocationTable.zoo <- with(LocationTable, zoo(test, order.by = x))
-#ts(, frequency = 12, start = c(1995,1))
+LocationTableTS <- lapply(LocationTable, function(x) ts(x, start = c(1995,1), frequency = 12)) 
+class(LocationTableTS [[1]])
 
-#Converte each city to a time series
+
+#Plotting the data
+LocationTableTS[regions]
+
+plot(LocationTableTS[regions])
 # Cities: London
 AveragePriceSeasonallyAdjustedTS = ts(AveragePriceSeasonallyAdjusted, frequency = 12, start = c(2008,1))
 
