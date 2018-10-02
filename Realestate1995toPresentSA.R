@@ -50,7 +50,7 @@ class(LocationTableTS [[1]])
 LocationTableTS[regions]
 
 plot(LocationTableTS[regions])
-# Cities: London
+ # Cities: London
 AveragePriceSeasonallyAdjustedTS = ts(AveragePriceSeasonallyAdjusted, frequency = 12, start = c(2008,1))
 
 
