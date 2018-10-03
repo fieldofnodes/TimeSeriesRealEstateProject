@@ -1,0 +1,16 @@
+library(mFilter)
+library(TTR)
+library(forecast)
+library(xtable)
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+library(zoo)
+library(graphics)
+require(graphics)
+library(xts)
+require(zoo)
+library(grDevices)
+require(grDevices)
+
+
