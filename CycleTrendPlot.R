@@ -1,28 +1,31 @@
-#Run this line for mac
-#Set the working directory
-setwd("~/Documents/R Projects/TimeSeriesRealEstateProject")
+## Plots from each of the regions of the UK
+opar <- par(no.readonly=TRUE)
+par(mfrow=c(3,1),mar=c(3,3,2,1),cex=.8)
 
-#Run this line for ubuntu
-#Set the working directory
-setwd("/home/jon/Documents/Minvera Statistical Consulting/Real Estate Bulletin/TimeSeriesRealEstateProject")
+#PLots of the series themselves all in one plot.
+ts.plot(DecompDataEngland$x,DecompDataWales$x,	DecompDataLondon$x,	DecompDataNorthEast$x,	DecompDataWestMidlandsRegion$x,	DecompDataEastMidlands$x,	DecompDataSouthEast$x,	DecompDataSouthWest$x,	DecompDataEastofEngland$x,	DecompDataNorthWest$x,	DecompDataYorkshireandtheHumber$x,	DecompDataEnglandandWales$x,		
+     main="Average house prices in various regions of the UK",
+     col=1:12, ylab="")
+legend("topleft",legend=regions, col=1:12, lty=1, ncol=1, cex = 0.8)
 
-#input packages needed to run script
-source("packagestoUse.R")
 
-#input data, create dataframe
-source("AveragePricesSADataFrame.R")
+plot(unemp.hp1$cycle,
+     main="Hodrick-Prescott filter of Average Prices: Cycle,drift=TRUE",
+     col=2, ylab="", ylim=range(unemp.hp4$cycle,na.rm=TRUE))
+lines(unemp.hp2$cycle,col=3)
+lines(unemp.hp3$cycle,col=4)
+lines(unemp.hp4$cycle,col=5)
+legend("topleft",legend=c("lambda=1600", "lambda=800", "freq=12", "freq=52"), col=1:5, lty=rep(1,5), ncol=1)
+par(opar)
 
-#Create time series data
-source("AveragePricesSATimeSeries.R")
 
-#Create and input plot work
-source("TimeSeriesPlotsNoWork.R")
 
-#Creating the Trend and Cycle components using the HP filter model
-source("TrendAndCycleDecompData.R")
 
-#Plotting the Trend and Cycle components of each regions in the UK in two plots - 1 for the series,trend and one for the cycle 
-source("CycleTrendPlot.R")
+
+
+
+
+
 
 
 
