@@ -1,6 +1,6 @@
 #Data ends at May 2017
 # Average Prices Seasonally Adjusted
-Data <- read.csv(file = "Average-price-seasonally-adjusted-2018-07.csv", header = TRUE)
+Data <- read.csv(file = "data/Average-price-seasonally-adjusted-2018-07.csv", header = TRUE)
 #Filter data per location
 EnglandData = filter(Data, Region_Name == "England")
 WalesData = filter(Data, Region_Name == "Wales")
