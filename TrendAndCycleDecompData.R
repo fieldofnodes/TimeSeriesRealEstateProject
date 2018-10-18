@@ -1,4 +1,5 @@
 #Trend and Cycle decompositions
+
 DecompDataEngland=hpfilter(LocationTableTS$England,freq=NULL,type=c("lambda","frequency"),drift=TRUE)
 DecompDataWales=hpfilter(LocationTableTS$Wales,freq=NULL,type=c("lambda","frequency"),drift=TRUE)
 DecompDataLondon=hpfilter(LocationTableTS$London,freq=NULL,type=c("lambda","frequency"),drift=TRUE)

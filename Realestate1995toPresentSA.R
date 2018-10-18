@@ -18,8 +18,12 @@ source("AveragePricesSATimeSeries.R")
 #Create and input plot work
 source("TimeSeriesPlotsNoWork.R")
 
-#Creating the Trend and Cycle components using the HP filter model
+#Creating the Trend and Cycle components using the HP filter model and standard lambda
 source("TrendAndCycleDecompData.R")
+
+#Creating the Trend and Cycle components using the HP filter model and  lambda being for monthly (129600)
+source("hpFiltermonthlyFrequencyDecomp.R")
+
 
 #Plotting the Trend and Cycle components of each regions in the UK in two plots - 1 for the series,trend and one for the cycle 
 source("CycleTrendPlot.R")
