@@ -47,5 +47,11 @@ AveragePriceSeasonallyAdjustedTSSTLDecompositionPlot = plot(AveragePriceSeasonal
 dev.off()
 
 
+#Adding quarterly timeseries of the HPI since 1968.
+#File conveted to zooreg object and will be used as a timeseries.
+source("src/HPIQuarterlySeries.R")
+
+
+
 
 
