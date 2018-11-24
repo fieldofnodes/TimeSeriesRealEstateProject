@@ -4,7 +4,7 @@ library(extrafont)
 
 
 
-alibrary(mFilter)
+library(mFilter)
 library(TTR)
 library(forecast)
 library(xtable)
@@ -40,7 +40,6 @@ DistincColours = function(x){
 
 library(grid)
 library(useful)
-
 library(mFilter)
 library(TTR)
 library(forecast)
