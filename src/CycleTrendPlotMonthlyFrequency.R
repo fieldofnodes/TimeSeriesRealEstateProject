@@ -1,6 +1,6 @@
 
 #PLots of the series themselves all in one plot.
-colorToUse = DistincColours(12)
+colorToUse = DistincColours(1)
 ts.plot(DecompDataEnglandMonthly$x,DecompDataWalesMonthly$x,	DecompDataLondonMonthly$x,	DecompDataNorthEastMonthly$x,	DecompDataWestMidlandsRegionMonthly$x,	DecompDataEastMidlandsMonthly$x,	DecompDataSouthEastMonthly$x,	DecompDataSouthWestMonthly$x,	DecompDataEastofEnglandMonthly$x,	DecompDataNorthWestMonthly$x,	DecompDataYorkshireandtheHumberMonthly$x,	DecompDataEnglandandWalesMonthly$x,		
      main="Average house prices in various regions of the UK",
      col=colorToUse, ylab="", lty = 1:12)
@@ -8,7 +8,7 @@ ts.plot(DecompDataEnglandMonthly$x,DecompDataWalesMonthly$x,	DecompDataLondonMon
 
 
 #PLots of the trends all in one plot.
-#colorToUse = DistincColours(12)
+#colorToUse = DistincColours(1)
 ts.plot(DecompDataEnglandMonthly$trend,DecompDataWalesMonthly$trend,	DecompDataLondonMonthly$trend,	DecompDataNorthEastMonthly$trend,	DecompDataWestMidlandsRegionMonthly$trend,	DecompDataEastMidlandsMonthly$trend,	DecompDataSouthEastMonthly$trend,	DecompDataSouthWestMonthly$trend,	DecompDataEastofEnglandMonthly$trend,	DecompDataNorthWestMonthly$trend,	DecompDataYorkshireandtheHumberMonthly$trend,	DecompDataEnglandandWalesMonthly$trend,		
         main="Average house prices trend in various regions of the UK",
         col=colorToUse, ylab="", lty =1:12)
@@ -24,8 +24,8 @@ ts.plot(DecompDataEnglandMonthly$cycle,DecompDataWalesMonthly$cycle,	DecompDataL
 
 
 plot(NULL ,xaxt='n',yaxt='n',bty='n',ylab='',xlab='', xlim=0:1, ylim=0:1)
-legend("center",legend=regions, col=colorToUse, lty=1:12, ncol=2, cex = 1.2)
-mtext("Regions of the UK",side = 3,line = -4.5,outer = FALSE, at = NA)
+legend("center",legend=regions, col=colorToUse, lty=1:12, ncol=2, cex = .80)
+mtext("Regions of the UK",side = 3,line = 0,outer = FALSE, at = NA)
 
 
 
