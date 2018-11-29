@@ -1,6 +1,6 @@
 
 #PLots of the series themselves all in one plot.
-colorToUse = DistincColours(1)
+colorToUse = "blue"
 ts.plot(DecompDataEnglandMonthly$x,DecompDataWalesMonthly$x,	DecompDataLondonMonthly$x,	DecompDataNorthEastMonthly$x,	DecompDataWestMidlandsRegionMonthly$x,	DecompDataEastMidlandsMonthly$x,	DecompDataSouthEastMonthly$x,	DecompDataSouthWestMonthly$x,	DecompDataEastofEnglandMonthly$x,	DecompDataNorthWestMonthly$x,	DecompDataYorkshireandtheHumberMonthly$x,	DecompDataEnglandandWalesMonthly$x,		
      main="Average house prices in various regions of the UK",
      col=colorToUse, ylab="", lty = 1:12)
